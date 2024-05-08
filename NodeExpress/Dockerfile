@@ -21,3 +21,12 @@ EXPOSE 3000
  
 # Serve the app
 CMD ["npm", "start"]
+
+
+# FROM node:18-alpine: Specifies the base image to use. In this case, we're using the official Node.js 14 image.
+# WORKDIR /usr/src/app: Sets the working directory in the container.
+# COPY package*.json ./: Copies the package.json and package-lock.json files to the working directory.
+# RUN npm install: Installs the app dependencies.
+# COPY . .: Copies the rest of the app source code to the working directory.
+# EXPOSE 3000: Exposes the port your app is listening on (change the port number if necessary).
+# CMD ["node", "app.js"]: Defines the command to start your Node.js application.
